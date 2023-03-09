@@ -20,7 +20,7 @@ export const convert1DArrayToValue = (
 
   const widthSlope = width / newWidth;
   const heightSlope = height / newHeight;
-  // being ASCII, we need a ration of height because of the
+  // being ASCII, we need a ratio of height because of the
   // height of the character
   const charSlope = 3;
 
@@ -48,9 +48,8 @@ export const convert1DArrayToValue = (
 };
 
 // binaryCharMap will be a set of characters to be used
-// Example: ['%'] will setup a 2-bit ascii with foreground using %
-// the return will be a 3 dimensional array where the first level
-// is the bit level, second level row and third level column
+// Example: ['.', '%'] will setup a 2-bit ascii with background using .
+//          foreground using %
 export const run = (
   img: { width: number; data: Uint8Array },
   binaryCharMap: string[],
